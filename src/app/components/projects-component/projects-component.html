@@ -1,0 +1,83 @@
+<section class="projects py-5" id="services">
+  <div class="container">
+
+    <!-- Header -->
+    <div class="text-center mb-5">
+      <h2 class="fw-bold mb-3">Our Services</h2>
+      <p class="text-muted">Success stories from our accounting services</p>
+    </div>
+
+    <!-- Stats -->
+    <div class="row text-center mb-5">
+      <div *ngFor="let stat of stats" class="col-md-4 mb-3">
+        <div class="stat-card p-3">
+          <h3 class="fw-bold">{{stat.number}}</h3>
+          <p class="text-muted mb-0">{{stat.label}}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Category Filter -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="category-filter">
+          <div class="btn-group" role="group">
+            <button *ngFor="let cat of categories"
+                    class="btn btn-outline-primary"
+                    [class.active]="selectedCategory === cat.id"
+                    (click)="filterProjects(cat.id)">
+              {{cat.icon}} {{cat.name}}
+              <span class="badge bg-secondary ms-2">{{getCategoryCount(cat.id)}}</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Projects Grid -->
+    <div class="row g-4">
+
+      <!-- No Projects Message -->
+      <div *ngIf="filteredProjects.length === 0" class="col-12 text-center py-5">
+        <div class="empty-state">
+          <i class="fa fa-file-alt fa-3x text-muted mb-3"></i>
+          <h5>No Projects Found</h5>
+          <p class="text-muted">Try selecting a different category</p>
+        </div>
+      </div>
+
+      <!-- Project Cards -->
+      <div *ngFor="let project of filteredProjects" class="col-md-6 col-lg-4">
+        <div class="project-card">
+
+          <!-- Category Badge -->
+          <div class="category-badge">
+            <span [ngClass]="'badge bg-' + getCategoryClass(project.category)">
+              {{getCategoryName(project.category)}}
+            </span>
+          </div>
+
+          <!-- Project Content -->
+          <div class="project-content">
+            <h5 class="project-title">{{project.title}}</h5>
+            <p class="project-client">
+              <i class="fa fa-building me-2"></i>{{project.client}}
+            </p>
+            <p class="project-desc">{{project.description}}</p>
+
+            <!-- Result -->
+            <div class="project-result">
+              <i class="fa fa-check-circle text-success me-2"></i>
+              <span>{{project.result}}</span>
+            </div>
+
+            <!-- Year -->
+            <div class="project-year">
+              <i class="fa fa-calendar me-2"></i>{{project.year}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,98 @@
+/* PAGE */
+.areas-page {
+  background: #ffffff;
+  margin-top: 5rem;
+}
+
+/* TITLE */
+.page-title {
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: #000;
+}
+
+.page-subtitle {
+  font-size: 0.95rem;
+  color: #444;
+  margin-top: 0.5rem;
+}
+
+/* LEFT MENU */
+.areas-menu {
+  border: 1px solid #e5e5e5;
+  border-radius: 6px;
+  padding: 1rem;
+}
+
+.areas-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.areas-list li {
+  padding: 12px 14px;
+  font-size: 0.95rem;
+  color: #222;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-bottom: 4px;
+  transition: background 0.2s ease;
+}
+
+.areas-list li:hover {
+  background: #f3f3f3;
+}
+
+.areas-list li.active {
+  background: #000;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* RIGHT CONTENT */
+.area-detail {
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  padding: 2.5rem;
+  max-width: 900px;
+}
+
+/* SERVICE TITLE */
+.area-title {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 1.2rem;
+}
+
+/* DESCRIPTION */
+.area-description {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 1.6rem;
+  white-space: pre-line; /* IMPORTANT */
+}
+
+/* BULLET POINTS */
+.area-points {
+  list-style: circle;
+  padding-left: 2rem;
+}
+
+.area-points li {
+  font-size: 0.95rem;
+  color: #111;
+  margin-bottom: 0.6rem;
+  padding-left: 18px;
+  position: relative;
+}
+
+.area-points li::before {
+  position: absolute;
+  left: 0;
+  color: #000;
+}
+
+

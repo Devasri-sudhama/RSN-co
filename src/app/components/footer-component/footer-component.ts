@@ -17,13 +17,12 @@ export class FooterComponent implements OnInit {
 
   // Services Links
   servicesLinks = [
+
+    { title: 'Accounting & Bookkeeping', path: '/services/accounting' },
     { title: 'Audit & Assurance', path: '/services/audit-assurance' },
     { title: 'Taxation Services', path: '/services/taxation' },
     { title: 'GST Compliance & Advisory', path: '/services/gst' },
-    { title: 'Accounting & Bookkeeping', path: '/services/accounting' },
     { title: 'Company Incorporation', path: '/services/incorporation' },
-    { title: 'ROC & Statutory Compliance', path: '/services/roc-compliance' },
-    { title: 'Payroll & Labour Compliance', path: '/services/payroll' },
     { title: 'Financial & Business Advisory', path: '/services/advisory' }
   ];
 

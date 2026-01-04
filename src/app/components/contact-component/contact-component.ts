@@ -2,11 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import {ApiService, ContactRequest} from '../../service/api.service';
+import {FooterComponent} from '../footer-component/footer-component';
+import {HeaderComponent} from '../header-component/header-component';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule, FooterComponent, HeaderComponent],
   templateUrl: './contact-component.html',
 })
 export class ContactComponent implements OnInit {

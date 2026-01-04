@@ -1,0 +1,89 @@
+<section class="areas-page">
+  <div class="container-fluid py-5">
+
+    <!-- PAGE HEADING -->
+    <div class="row mb-5">
+      <div class="col-12 text-center">
+        <h1 class="page-title">Areas of Practice</h1>
+        <p class="page-subtitle">
+          Professional services delivered in accordance with applicable laws and standards
+        </p>
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+
+      <div class="row justify-content-center">
+
+        <!-- LEFT: AREAS LIST -->
+        <div class="col-lg-3 col-md-4 mb-4">
+          <aside class="areas-menu">
+            <ul class="areas-list">
+              <li
+                *ngFor="let service of services"
+                [class.active]="service.slug === selectedSlug"
+                (click)="navigate(service.slug)"
+              >
+                {{ service.title }}
+              </li>
+            </ul>
+          </aside>
+        </div>
+
+        <!-- MIDDLE: DETAILS -->
+        <div class="col-lg-6 col-md-8">
+          <div class="area-detail" *ngIf="selectedService">
+
+            <h2 class="area-title">
+              {{ selectedService.title }}
+            </h2>
+
+            <p
+              class="area-description"
+              *ngIf="selectedService.description"
+            >
+              {{ selectedService.description }}
+            </p>
+
+            <ul
+              class="area-points"
+              *ngIf="selectedService.points?.length"
+            >
+              <li *ngFor="let point of selectedService.points">
+                {{ point }}
+              </li>
+            </ul>
+
+          </div>
+        </div>
+
+        <!-- RIGHT: WHO WE ARE -->
+        <div class="col-lg-3 d-none d-lg-block">
+          <aside class="who-we-are">
+
+            <h5 class="side-title">Who We Are</h5>
+
+            <ul class="side-points">
+              <li>
+                <a routerLink="/leadership" class="side-link">
+                  Leadership
+                </a>
+              </li>
+
+              <li>
+                <a routerLink="/values" class="side-link">
+                  Our Values
+                </a>
+              </li>
+            </ul>
+
+
+          </aside>
+        </div>
+
+      </div>
+
+
+    </div>
+  </div>
+</section>

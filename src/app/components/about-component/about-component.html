@@ -10,9 +10,18 @@
 
     <!-- Content Overlay -->
     <div class="carousel-content">
-      <h1 class="company-name">RSN<span class="ampersand">&</span>Co</h1>
-      <p class="tagline">With over 3 years of experience, we've built a strong reputation for excellence.</p>
-      <div class="experience-badge">EST. 2022 • 3+ YEARS OF EXCELLENCE</div>
+      <h1 class="company-name">
+        RSN<span class="ampersand">&</span>Co
+      </h1>
+
+      <p class="tagline">
+        With over {{ yearsOfExperience }} years of experience, we've built a strong reputation for excellence.
+      </p>
+
+      <div class="experience-badge">
+        EST. {{ establishedYear }} • {{ yearsOfExperience }}+ YEARS OF EXCELLENCE
+      </div>
+
     </div>
 
     <!-- Scroll Down Arrow -->
@@ -34,15 +43,17 @@
         <div class="col-lg-6 mb-4 mb-lg-0">
           <div class="intro-text">
             <h2 class="mb-4 text-black">About Our Firm</h2>
-            <p class="lead mb-4">
-              We are a team of experienced Chartered Accountants providing comprehensive
-              financial services to businesses across India.
+            <p class="mb-4">
+              Our firm was established in the year {{ establishedYear }}, and is engaged in providing professional services in the areas of audit, taxation, and advisory, in accordance with the provisions of the
+              Chartered Accountants Act, 1949 and the standards issued by the Institute of Chartered Accountants of India (ICAI).
             </p>
-            <p>
-              Established in 2023, our firm has grown to become one of the most trusted
-              accounting partners for SMEs, startups, and established corporations.
-              We combine traditional accounting wisdom with modern technology to deliver
-              exceptional results.
+            <p class="mb-4">
+              The firm is a partnership firm consisting of three partners, each being members of the Institute of Chartered Accountants of India.
+              The partners collectively possess experience in handling statutory audits, tax compliances, and advisory assignments across various sectors.
+            </p>
+            <p class="mb-4">
+              The firm follows established systems and procedures to ensure compliance with applicable laws, professional standards, and ethical requirements.
+              Emphasis is placed on due care, objectivity, confidentiality, and timely execution of assignments.
             </p>
           </div>
         </div>
@@ -51,30 +62,10 @@
             <img
               ngSrc="assets/images/about/office.jpg"
               alt="About"
-              width="1000"
+              width="900"
               height="667"
               class="responsive-img"
             />
-
-
-
-
-
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Stats -->
-    <section class="stats-section py-5 bg-light">
-      <div class="container">
-        <div class="row text-center">
-          <div *ngFor="let stat of stats" class="col-md-4 col-6 mb-4">
-            <div class="stat-item">
-              <i [class]="'fa ' + stat.icon"></i>
-              <h3 class="my-2">{{stat.number}}</h3>
-              <p class="mb-0">{{stat.label}}</p>
-            </div>
           </div>
         </div>
       </div>
@@ -88,14 +79,13 @@
 
             <h3 class="mb-3">Our Mission</h3>
             <p>
-              To provide reliable, accurate, and timely accounting services that help
-              businesses grow while ensuring compliance with all regulatory requirements.
+              Our mission is to provide comprehensive and high-quality professional services that are carefully aligned with the specific requirements of each client.
+              We strive to simplify complex financial, taxation, and compliance processes by making them robust, transparent, and hassle-free.
             </p>
-            <ul class="list-unstyled">
-              <li><i class="fa fa-check me-2"></i>Accurate financial reporting</li>
-              <li><i class="fa fa-check me-2"></i>Timely tax compliance</li>
-              <li><i class="fa fa-check me-2"></i>Strategic financial advice</li>
-            </ul>
+            <p>
+              We are committed to delivering end-to-end support across all stages of our client engagements, ensuring accuracy, timeliness, and reliability in every assignment we undertake.
+              Integrity, confidentiality, and ethical conduct form the foundation of our practice, and we continuously work towards building long-term relationships based on trust, professionalism, and consistent value addition.
+            </p>
           </div>
         </div>
         <div class="col-lg-6 mb-4">
@@ -103,62 +93,153 @@
 
             <h3 class="mb-3">Our Vision</h3>
             <p>
-              To build a trusted and respected Chartered Accountant firm in India by upholding the highest standards of integrity, professional competence, and ethical practice while delivering consistent value to our clients.
+              Our vision is to become a respected and trusted leader in the professional fraternity by setting high standards of excellence, ethics, and client service.
+              We aspire to be recognized for our technical expertise, practical approach, and commitment to delivering solutions that support our clients’ growth and compliance objectives.
             </p>
-            <ul class="list-unstyled">
-              <li><i class="fa fa-check me-2"></i>Strengthening long-term client relationships</li>
-              <li><i class="fa fa-check me-2"></i>Leveraging technology to improve service quality</li>
-              <li><i class="fa fa-check me-2"></i>Achieving sustainable and responsible growth</li>
-            </ul>
+            <p>
+              By fostering continuous learning, embracing evolving regulations, and adopting best professional practices,
+              we aim to contribute meaningfully to our clients’ success while upholding the values and responsibilities of the Chartered Accountancy profession.
+            </p>
           </div>
         </div>
       </div>
       <div id="services"></div>
     </section>
 
-    <!-- Services -->
-    <section class="services-section py-5 bg-light" >
-      <div class="text-center mb-5">
-        <h2 class="mb-3">Our Services</h2>
-        <p class="text-muted">Comprehensive accounting solutions</p>
-      </div>
-      <div class="row">
-        <div *ngFor="let service of services" class="col-lg-4 col-md-6 mb-4">
-          <div class="service-card text-center">
-            <div class="service-icon">
-              <i [class]="'fa ' + service.icon"></i>
-            </div>
-            <h5 class="mt-3 mb-2">{{service.title}}</h5>
-            <p class="text-muted">{{service.description}}</p>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- Team -->
-    <section class="team-section py-5">
-      <div class="text-center mb-5">
-        <h2 class="mb-3">Meet Our Team</h2>
-        <p class="text-muted">Certified professionals with extensive experience</p>
-      </div>
-      <div class="row">
-        <div *ngFor="let member of team" class="col-lg-4 col-md-6 mb-4">
-          <div class="team-card p-2">
-            <div class="team-image">
-              <img [src]="member.image" [alt]="member.name" class="img-fluid">
-            </div>
-            <div class="team-info">
-              <h5 class="mb-1">{{member.name}}</h5>
-              <p class="text-black mb-2">{{member.position}}</p>
-              <p class="small text-muted mb-2">
-                <i class="fa fa-clock me-1"></i>{{ getExperience(member.startYear)}} experience
-              </p>
-              <p class="mb-3">{{member.description}}</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
   </div>
 </div>
+
+<section class="values-teaser">
+  <div class="container">
+
+    <!-- TITLE -->
+    <h2 class="main-title">Who We Are</h2>
+
+    <!-- TABS -->
+    <div class="tabs">
+      <span
+        class="tab"
+        [class.active]="activeTab === 'leadership'"
+        (click)="setTab('leadership')"
+      >
+        Leadership
+      </span>
+
+      <span
+        class="tab"
+        [class.active]="activeTab === 'values'"
+        (click)="setTab('values')"
+      >
+        Values
+      </span>
+
+      <span
+        class="tab"
+        [class.active]="activeTab === 'services'"
+        (click)="setTab('services')"
+      >
+        Practice Areas
+      </span>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="content">
+
+      <!-- WHO WE ARE -->
+      <ng-container *ngIf="activeTab === 'leadership'">
+        <p>
+          RSN & Co is a firm of Chartered Accountants providing professional
+          services in audit, taxation, accounting, and regulatory compliance.
+          Our practice is built on strong technical competence, ethical conduct,
+          and a commitment to professional excellence.
+        </p>
+
+      </ng-container>
+
+      <!-- VALUES -->
+      <ng-container *ngIf="activeTab === 'values'">
+        <p>
+          The values of RSN & Co guide our professional conduct and define our
+          commitment to integrity, objectivity, confidentiality, and ethical
+          decision-making.
+        </p>
+
+        <p>
+          These principles are central to our professional practice and ensure
+          compliance with statutory requirements, professional standards, and
+          the ethical framework prescribed by ICAI.
+        </p>
+      </ng-container>
+
+      <!-- PRACTICE AREAS -->
+      <ng-container *ngIf="activeTab === 'services'">
+        <p>
+          Our practice areas include audit and assurance, direct and indirect
+          taxation, accounting and bookkeeping services, corporate law and
+          regulatory compliances, and advisory services.
+        </p>
+
+        <p>
+          We deliver these services with a focus on accuracy, timeliness,
+          compliance, and professional responsibility.
+        </p>
+      </ng-container>
+
+    </div>
+
+    <!-- READ MORE -->
+    <div class="read-more-wrapper">
+      <span class="line"></span>
+
+      <!-- Dynamic link based on tab -->
+      <a
+        *ngIf="activeTab === 'leadership'"
+        routerLink="/values"
+        class="read-more-btn"
+      >
+        READ MORE
+      </a>
+
+      <a
+        *ngIf="activeTab === 'values'"
+        routerLink="/values"
+        fragment="values"
+        class="read-more-btn"
+      >
+        READ MORE
+      </a>
+
+      <a
+        *ngIf="activeTab === 'services'"
+        routerLink="/services"
+        class="read-more-btn"
+      >
+        READ MORE
+      </a>
+
+      <span class="line"></span>
+    </div>
+
+  </div>
+</section>
+
+<!-- Services -->
+<section class="services-section py-5 bg-light" >
+  <div class="text-center mb-5">
+    <h2 class="mb-3">Areas of Practice</h2>
+  </div>
+  <div class="row">
+    <div *ngFor="let service of services" class="col-lg-4 col-md-6 mb-4">
+      <div class="service-card text-center"
+           [routerLink]="['/services', service.slug]">
+        <div class="service-icon">
+          <i [class]="'fa ' + service.icon"></i>
+        </div>
+        <h5 class="mt-3 mb-2">{{service.title}}</h5>
+        <p class="text-muted">{{service.shortDescription }}</p>
+      </div>
+    </div>
+  </div>
+</section>

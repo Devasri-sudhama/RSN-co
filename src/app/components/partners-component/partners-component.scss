@@ -1,0 +1,62 @@
+.partners-section {
+  background: #ffffff;
+}
+
+/* TITLE */
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #000;
+}
+
+.section-subtitle {
+  color: #444;
+  font-size: 0.95rem;
+}
+
+/* CARD */
+.partner-card {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2.5rem;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.partner-name {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 0.25rem;
+}
+
+.partner-role {
+  display: block;
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.partner-description {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #333;
+  white-space: pre-line;
+}
+
+/* CONTROLS */
+.carousel-control-prev,
+.carousel-control-next {
+  color: #000;
+  font-size: 2.5rem;
+  width: 5%;
+  opacity: 1;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  color: #000;
+}

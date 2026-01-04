@@ -1,72 +1,102 @@
 import { Component } from '@angular/core';
 import {CommonModule, NgOptimizedImage} from '@angular/common';
+import {RouterLink} from '@angular/router';
+import {ProjectsComponent} from '../projects-component/projects-component';
+import {PartnersComponent} from '../partners-component/partners-component';
 
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [CommonModule, NgOptimizedImage],
+  imports: [CommonModule, NgOptimizedImage, RouterLink, ProjectsComponent, PartnersComponent],
   templateUrl: './about-component.html',
 })
 export class AboutComponent {
+  establishedYear = 2014;
+  currentYear = new Date().getFullYear();
 
-  // Company stats
-  stats = [
-    { number: '5+', label: 'Years of Professional Experience', icon: 'fa-calendar-alt' },
-    { number: '250+', label: 'Satisfied Clients', icon: 'fa-users' },
-    { number: '500+', label: 'Professional Engagements', icon: 'fa-check-circle' }
+  yearsOfExperience = this.currentYear - this.establishedYear;
+  activeTab: 'leadership' | 'values' | 'services' = 'leadership';
+
+  setTab(tab: 'leadership' | 'values' | 'services') {
+    this.activeTab = tab;
+  }
+  values = [
+    {
+      title: 'Integrity',
+      description:
+        'We conduct all professional engagements with integrity, fairness, and honesty, ensuring unbiased and transparent professional judgment.'
+    },
+    {
+      title: 'Objectivity',
+      description:
+        'We maintain objectivity in all professional and business relationships and do not allow bias, conflict of interest, or undue influence.'
+    },
+    {
+      title: 'Professional Competence and Due Care',
+      description:
+        'We continuously maintain professional knowledge and act diligently in accordance with applicable technical, professional, and ethical standards.'
+    },
+    {
+      title: 'Confidentiality',
+      description:
+        'We respect the confidentiality of information acquired during professional engagements and disclose it only when legally or professionally required.'
+    },
+    {
+      title: 'Professional Behaviour',
+      description:
+        'We comply with relevant laws and regulations and avoid any conduct that may discredit the profession.'
+    },
+    {
+      title: 'Commitment to Quality and Compliance',
+      description:
+        'We adhere to established systems and quality control standards to ensure consistent delivery of services in line with statutory requirements.'
+    },
+    {
+      title: 'Responsibility to Clients and Stakeholders',
+      description:
+        'We serve the best interests of our clients while upholding professional responsibilities to regulators, authorities, and stakeholders.'
+    }
   ];
-
-  // Team members
-  team = [
+  // Services
+  services = [
     {
-      name: 'Nikhil',
-      position: 'Managing Partner',
-      startYear: 2019,
-      image: 'assets/images/team/rajesh.jpg',
-      description: 'Expert in tax planning and audit'
+      title: 'Accounting & Bookkeeping',
+      icon: 'fa-book',
+      shortDescription: 'Maintenance of books and preparation of financial statements.',
+      slug: 'accounting-bookkeeping'
     },
     {
-      name: 'Ravinder',
-      position: 'Tax Consultant',
-      startYear: 2019,
-      image: 'assets/images/team/priya.jpg',
-      description: 'Specialized in GST and international tax'
+      title: 'Audit & Assurance',
+      icon: 'fa-search-dollar',
+      shortDescription: 'Statutory, internal, and tax audits with compliance focus.',
+      slug: 'audit-assurance'
     },
     {
-      name: 'Srikanth',
-      position: 'Audit Head',
-      startYear: 2019,
-      image: 'assets/images/team/amit.jpg',
-      description: 'Statutory and internal audit expert'
+      title: 'Direct Taxation',
+      icon: 'fa-file-invoice-dollar',
+      shortDescription: 'Income tax compliance, advisory, and representation.',
+      slug: 'direct-taxation'
+    },
+    {
+      title: 'Indirect Taxation (GST)',
+      icon: 'fa-receipt',
+      shortDescription: 'GST registration, filing, and compliance advisory.',
+      slug: 'gst-services'
+    },
+    {
+      title: 'Corporate Law & MCA',
+      icon: 'fa-building',
+      shortDescription: 'Company incorporation and MCA compliances.',
+      slug: 'corporate-law-mca'
+    },
+    {
+      title: 'Advisory Services',
+      icon: 'fa-chart-line',
+      shortDescription: 'Process reviews, MIS, and internal control advisory.',
+      slug: 'advisory-services'
     }
   ];
 
-
-  // Services
-  services = [
-    { title: 'Audit & Assurance', icon: 'fa-search-dollar', description: 'Statutory and internal audits' },
-    { title: 'Tax Advisory', icon: 'fa-file-invoice-dollar', description: 'Tax planning and compliance' },
-    { title: 'GST Services', icon: 'fa-receipt', description: 'GST registration and filing' },
-    { title: 'Company Formation', icon: 'fa-building', description: 'Business setup and registration' },
-    { title: 'Accounting', icon: 'fa-calculator', description: 'Bookkeeping and payroll' },
-    { title: 'Financial Consulting', icon: 'fa-chart-line', description: 'Business advisory services' }
-  ];
-
-  // Values
-  values = [
-    { title: 'Integrity', icon: 'fa-handshake', description: 'Honest and ethical practices' },
-    { title: 'Expertise', icon: 'fa-graduation-cap', description: 'Certified professionals' },
-    { title: 'Confidentiality', icon: 'fa-lock', description: 'Client data protection' },
-    { title: 'Timeliness', icon: 'fa-clock', description: 'On-time delivery' }
-  ];
-
-  // Certifications
-  certifications = [
-    { name: 'ICAI Certified', icon: 'fa-award' },
-    { name: 'GST Practitioner', icon: 'fa-file-certificate' },
-    { name: 'ISO 9001:2015', icon: 'fa-certificate' },
-    { name: 'MSME Registered', icon: 'fa-building' }
-  ];
 
   getExperience(startYear: number): string {
     const currentYear = new Date().getFullYear();

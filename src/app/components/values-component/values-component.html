@@ -1,0 +1,66 @@
+<section class="values-page mt-5">
+  <div class="container-fluid py-5">
+
+    <!-- PAGE HEADING -->
+    <div class="row mb-5">
+      <div class="col-12 text-center">
+        <h1 class="page-title">Our Values</h1>
+        <p class="page-subtitle">
+          Ethical principles that guide our professional conduct and decision-making
+        </p>
+      </div>
+    </div>
+
+    <!-- MAIN ROW -->
+    <div class="row justify-content-center">
+
+      <!-- LEFT: VALUES LIST -->
+      <div class="col-lg-3 col-md-4 mb-4">
+
+      </div>
+
+      <!-- MIDDLE: VALUE DETAILS -->
+      <div class="col-lg-6 col-md-8">
+        <div class="area-detail">
+
+          <div
+            *ngFor="let value of values"
+          >
+            <h5>
+              {{ value.title }}
+            </h5>
+
+            <p class="page-subtitle">
+              {{ value.description }}
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- RIGHT: WHO WE ARE -->
+      <div class="col-lg-3 d-none d-lg-block">
+        <aside class="who-we-are">
+
+          <h5 class="side-title">Who We Are</h5>
+
+          <ul class="side-points">
+            <li>
+              <a routerLink="/leadership" class="side-link">
+                Leadership
+              </a>
+            </li>
+
+            <li>
+              <a routerLink="/services" class="side-link">
+                Practice Areas
+              </a>
+            </li>
+          </ul>
+
+        </aside>
+      </div>
+
+    </div>
+  </div>
+</section>

@@ -1,27 +1,7 @@
+<app-header/>
 <section id="contact" class="contact-section">
   <!-- Main Content -->
   <div class="container py-5">
-    <!-- Contact Methods -->
-    <div class="row mb-5">
-      <div class="col-12 text-center mb-5">
-        <h2 class="section-title">Contact Methods</h2>
-        <p class="lead text-muted">Choose your preferred way to connect with us</p>
-      </div>
-
-      <div *ngFor="let method of contactMethods" class="col-lg-6 col-md-6 mb-4">
-        <div class="contact-method-card text-center p-4 h-100">
-          <div class="method-icon mb-3">
-            <i [class]="method.icon"></i>
-          </div>
-          <h5 class="mb-3">{{method.title}}</h5>
-          <div class="method-details mb-3">
-            <div *ngFor="let detail of method.details" class="detail-item">
-              {{detail}}
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <div class="row">
       <!-- Contact Form Column -->

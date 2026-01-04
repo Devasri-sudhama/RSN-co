@@ -612,6 +612,7 @@ body {
    ========================================================================== */
 
 .contact-section {
+  margin-top: 4rem;
   background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
   min-height: 100vh;
 }
@@ -1559,3 +1560,220 @@ body {
     display: none !important;
   }
 }
+
+
+
+.values-section {
+  background-color: #ffffff;
+}
+
+/* HEADER */
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #000;
+}
+
+.section-subtitle {
+  font-size: 0.95rem;
+  color: #444;
+  margin-top: 0.5rem;
+}
+
+/* VALUE CARD */
+.value-card {
+  border: 1px solid #e5e5e5;
+  border-radius: 6px;
+  padding: 1.8rem;
+  height: 100%;
+  background: #ffffff;
+}
+
+.value-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 0.75rem;
+}
+
+.value-description {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #333;
+}
+
+/* FOOTNOTE */
+.values-footnote {
+  font-size: 0.85rem;
+  color: #555;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+
+
+.values-teaser {
+  background: #1c1c1c;
+  color: #ffffff;
+  padding: 6rem 0;
+  text-align: center;
+}
+
+/* TITLE */
+.main-title {
+  font-size: 3rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+
+/* TABS */
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  margin-bottom: 3rem;
+}
+
+.tab {
+  font-size: 0.95rem;
+  color: #999;
+  position: relative;
+}
+
+.tab.active {
+  color: #ffffff;
+}
+
+.tab.active::after {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 1px;
+  background: #ffffff;
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%);
+}
+
+/* CONTENT */
+.content {
+  max-width: 820px;
+  margin: 0 auto 3rem;
+}
+
+.content p {
+  font-size: 1rem;
+  line-height: 1.9;
+  color: #e0e0e0;
+  margin-bottom: 1.5rem;
+}
+
+/* READ MORE */
+.read-more-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.line {
+  width: 120px;
+  height: 1px;
+  background: #777;
+}
+
+.read-more-btn {
+  padding: 12px 26px;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.read-more-btn:hover {
+  background: #ffffff;
+  color: #000000;
+}
+
+
+
+.side-points {
+  list-style: circle;
+  padding: 0;
+  padding-left: 2rem;
+  margin: 1rem 0;
+}
+
+.side-points li {
+  margin-bottom: 0.6rem;
+  padding-left: 14px;
+  position: relative;
+}
+
+.side-points li::before {
+  position: absolute;
+  left: 0;
+  color: #000;
+}
+
+.side-link {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #000;
+  text-decoration: none;
+}
+
+.side-link:hover {
+  text-decoration: underline;
+}
+
+
+
+/* RIGHT CONTENT */
+.area-detail {
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  padding: 2.5rem;
+  max-width: 900px;
+}
+
+/* SERVICE TITLE */
+.area-title {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 1.2rem;
+}
+
+/* DESCRIPTION */
+.area-description {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 1.6rem;
+  white-space: pre-line; /* IMPORTANT */
+}
+
+/* BULLET POINTS */
+.area-points {
+  list-style: circle;
+  padding-left: 2rem;
+}
+
+.area-points li {
+  font-size: 0.95rem;
+  color: #111;
+  margin-bottom: 0.6rem;
+  padding-left: 18px;
+  position: relative;
+}
+
+.area-points li::before {
+  position: absolute;
+  left: 0;
+  color: #000;
+}
+
+

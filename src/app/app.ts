@@ -5,6 +5,8 @@ import {AboutComponent} from './components/about-component/about-component';
 import {ProjectsComponent} from './components/projects-component/projects-component';
 import {ContactComponent} from './components/contact-component/contact-component';
 import {FooterComponent} from './components/footer-component/footer-component';
+import {RouterOutlet} from '@angular/router';
+import {PartnersComponent} from './components/partners-component/partners-component';
 
 @Component({
   selector: 'app-root',
@@ -16,12 +18,12 @@ import {FooterComponent} from './components/footer-component/footer-component';
     ProjectsComponent,
     ContactComponent,
     FooterComponent,
+    PartnersComponent,
+    RouterOutlet,
   ],
   template: `
     <app-header></app-header>
-    <app-about></app-about>
-    <app-projects></app-projects>
-    <app-contact></app-contact>
+    <router-outlet></router-outlet>
     <app-footer></app-footer>
   `,
   styles: []

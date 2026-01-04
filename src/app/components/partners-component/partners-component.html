@@ -1,0 +1,60 @@
+<section class="partners-section mt-4">
+  <div class="container py-5">
+
+    <div class="text-center mb-5">
+      <h2 class="section-title">Our Partners</h2>
+      <p class="section-subtitle">
+        Leadership guided by integrity, experience, and professional excellence
+      </p>
+    </div>
+
+    <div
+      id="partnersCarousel"
+      class="carousel slide"
+      data-bs-ride="carousel"
+      data-bs-interval="8000"
+    >
+
+      <div class="carousel-inner">
+
+        <div
+          class="carousel-item"
+          *ngFor="let partner of partners; let i = index"
+          [class.active]="i === 0"
+        >
+          <div class="partner-card">
+
+            <h4 class="partner-name">{{ partner.name }}</h4>
+            <span class="partner-role">{{ partner.designation }}</span>
+
+            <p class="partner-description">
+              {{ partner.description }}
+            </p>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CONTROLS -->
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#partnersCarousel"
+        data-bs-slide="prev"
+      >
+        ‹
+      </button>
+
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#partnersCarousel"
+        data-bs-slide="next"
+      >
+        ›
+      </button>
+
+    </div>
+  </div>
+</section>

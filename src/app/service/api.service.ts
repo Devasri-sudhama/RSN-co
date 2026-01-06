@@ -8,6 +8,7 @@ export interface ContactRequest {
   name: string;
   email: string;
   phone: string;
+  preferredContact: string;
   subject: string;
   message: string;
 }
@@ -26,14 +27,25 @@ export interface Project {
   providedIn: 'root'
 })
 export class ApiService {
-  private apiUrl = 'http://localhost:8080/api';
+  private apiUrl = 'http://localhost:3000/api';
 
   constructor(private http: HttpClient) { }
 
-  // Contact Methods
-  submitContact(formData: ContactRequest): Observable<any> {
-    return this.http.post(`${this.apiUrl}/contact`, formData);
+
+  submitContact(formData: ContactRequest) {
+    return this.http.post(
+      `${this.apiUrl}/contact`,
+      formData
+    );
   }
+
+  applyJob(formData: FormData) {
+    return this.http.post(
+      `${this.apiUrl}/careers/apply`,
+      formData
+    );
+  }
+
 
   // Project Methods
   getProjects(): Observable<Project[]> {

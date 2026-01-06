@@ -1,0 +1,162 @@
+<app-header></app-header>
+
+<!-- ================= FULL SCREEN LOADER ================= -->
+<div *ngIf="isLoading" class="fullscreen-loader">
+  <div class="loader-content text-center">
+    <div class="spinner-border text-light mb-3"
+         style="width: 3rem; height: 3rem;"
+         role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+    <h5 class="text-light mb-1">Submitting Application</h5>
+    <p class="text-light-50 mb-0">Please wait…</p>
+  </div>
+</div>
+<!-- ====================================================== -->
+
+<section id="careers" class="careers-section">
+  <div class="container py-5">
+
+    <!-- PAGE TITLE -->
+    <div class="row mb-5 text-center">
+      <div class="col-12">
+        <h2 class="fw-bold">Careers</h2>
+        <p class="text-muted">
+          Join our team and build a rewarding career with us
+        </p>
+      </div>
+    </div>
+
+    <div class="row">
+
+      <!-- FORM -->
+      <div class="col-lg-8 mb-5">
+
+        <!-- SUCCESS / ERROR -->
+        <div *ngIf="success" class="alert alert-success mb-4">
+          <i class="fa fa-check-circle me-2"></i>
+          Application submitted successfully.
+        </div>
+
+        <div *ngIf="error" class="alert alert-danger mb-4">
+          <i class="fa fa-exclamation-circle me-2"></i>
+          Failed to submit application. Please try again.
+        </div>
+
+        <!-- FORM CARD -->
+        <div class="contact-form-card p-4 rounded-3 shadow-sm">
+          <h3 class="mb-3">Apply for a Position</h3>
+
+          <form [formGroup]="careerForm" (ngSubmit)="onSubmit()">
+
+            <!-- NAME + EMAIL -->
+            <div class="row mb-4">
+              <div class="col-md-6 mb-3">
+                <label class="form-label fw-bold">Full Name *</label>
+                <input type="text"
+                       class="form-control form-control-lg"
+                       formControlName="name"
+                       placeholder="Enter your full name"
+                       [class.is-invalid]="submitted && careerForm.get('name')?.invalid">
+                <div class="invalid-feedback error-field">Full name is required</div>
+              </div>
+
+              <div class="col-md-6 mb-3">
+                <label class="form-label fw-bold">Email *</label>
+                <input type="email"
+                       class="form-control form-control-lg"
+                       formControlName="email"
+                       placeholder="your.email@example.com"
+                       [class.is-invalid]="submitted && careerForm.get('email')?.invalid">
+                <div class="invalid-feedback error-field">Valid email is required</div>
+              </div>
+            </div>
+
+            <!-- PHONE + POSITION -->
+            <div class="row mb-4">
+              <div class="col-md-6 mb-3">
+                <label class="form-label fw-bold">Phone *</label>
+                <input type="tel"
+                       class="form-control form-control-lg"
+                       formControlName="phone"
+                       placeholder="9876543210"
+                       [class.is-invalid]="submitted && careerForm.get('phone')?.invalid">
+                <div class="invalid-feedback error-field">
+                  Enter a valid 10-digit phone number
+                </div>
+              </div>
+
+              <div class="col-md-6 mb-3">
+                <label class="form-label fw-bold">Position *</label>
+                <select class="form-select form-select-lg"
+                        formControlName="position"
+                        [class.is-invalid]="submitted && careerForm.get('position')?.invalid">
+
+                  <option value="" disabled>Select position</option>
+                  <option value="chartered_accountant">Chartered Accountant</option>
+                  <option value="articleship">Articleship</option>
+                  <option value="others">Others</option>
+                </select>
+                <div class="invalid-feedback error-field">
+                  Position is required
+                </div>
+              </div>
+            </div>
+
+            <!-- MESSAGE -->
+            <div class="mb-4">
+              <label class="form-label fw-bold">Cover Letter *</label>
+              <textarea rows="6"
+                        class="form-control form-control-lg"
+                        formControlName="message"
+                        placeholder="Briefly explain why you are a good fit for this role"
+                        [class.is-invalid]="submitted && careerForm.get('message')?.invalid"></textarea>
+              <div class="invalid-feedback error-field">
+                Message must be at least 10 characters
+              </div>
+            </div>
+
+            <!-- RESUME -->
+            <div class="mb-4">
+              <label class="form-label fw-bold">Upload Resume *</label>
+              <input type="file"
+                     class="form-control"
+                     accept=".pdf,.doc,.docx"
+                     (change)="onFileSelect($event)"
+                     #resumeInput
+                     [class.is-invalid]="submitted && !selectedFile">
+              <small class="text-muted">
+                PDF / DOC / DOCX (Max 2MB)
+              </small>
+              <div class="invalid-feedback error-field">
+                Resume file is required
+              </div>
+            </div>
+
+            <!-- ACTION -->
+            <button type="submit"
+                    class="btn btn-primary btn-lg px-5"
+                    [disabled]="isLoading">
+              <i class="fa fa-paper-plane me-2"></i>
+              Submit Application
+            </button>
+
+          </form>
+        </div>
+      </div>
+
+      <!-- RIGHT SIDE -->
+      <div class="col-lg-4">
+        <div class="p-4 rounded-3 shadow-sm">
+          <h5>Why Join Us?</h5>
+          <ul class="small text-muted">
+            <li>✔ Professional growth & mentorship</li>
+            <li>✔ Exposure to diverse clients</li>
+            <li>✔ Ethical work culture</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

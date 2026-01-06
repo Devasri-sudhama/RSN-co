@@ -7,25 +7,28 @@
 /* TITLE */
 .page-title {
   font-size: 2.3rem;
+  font-family: FiraSans-Regular;
   font-weight: 700;
   color: #000;
 }
 
 .page-subtitle {
   font-size: 0.95rem;
-  color: #444;
+  font-family: FiraSans-Light;
   margin-top: 0.5rem;
 }
 
 /* LEFT MENU */
 .areas-menu {
   border: 1px solid #e5e5e5;
+  font-family: FiraSans-Regular;
   border-radius: 6px;
   padding: 1rem;
 }
 
 .areas-list {
   list-style: none;
+  font-family: FiraSans-Regular;
   padding: 0;
   margin: 0;
 }
@@ -33,6 +36,7 @@
 .areas-list li {
   padding: 12px 14px;
   font-size: 0.95rem;
+  font-family: FiraSans-Regular;
   color: #222;
   cursor: pointer;
   border-radius: 4px;
@@ -54,6 +58,7 @@
 .area-detail {
   border: 1px solid #e5e5e5;
   border-radius: 8px;
+  font-family: FiraSans-Regular;
   padding: 2.5rem;
   max-width: 900px;
 }
@@ -61,6 +66,7 @@
 /* SERVICE TITLE */
 .area-title {
   font-size: 1.9rem;
+  font-family: FiraSans-Regular;
   font-weight: 700;
   color: #000;
   margin-bottom: 1.2rem;
@@ -70,9 +76,9 @@
 .area-description {
   font-size: 1.05rem;
   line-height: 1.8;
-  color: #333;
+  font-family: auto;
+  text-align: justify;
   margin-bottom: 1.6rem;
-  white-space: pre-line; /* IMPORTANT */
 }
 
 /* BULLET POINTS */

@@ -1,13 +1,12 @@
 import { Component } from '@angular/core';
 import {CommonModule, NgOptimizedImage} from '@angular/common';
 import {RouterLink} from '@angular/router';
-import {ProjectsComponent} from '../projects-component/projects-component';
 import {PartnersComponent} from '../partners-component/partners-component';
 
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [CommonModule, NgOptimizedImage, RouterLink, ProjectsComponent, PartnersComponent],
+  imports: [CommonModule, NgOptimizedImage, RouterLink],
   templateUrl: './about-component.html',
 })
 export class AboutComponent {

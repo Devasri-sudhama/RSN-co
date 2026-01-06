@@ -6,7 +6,7 @@ import {HeaderComponent} from '../header-component/header-component';
 
 @Component({
   selector: 'app-services-detail-component',
-  imports: [CommonModule, HeaderComponent, RouterOutlet, FooterComponent, RouterLink,],
+  imports: [CommonModule, RouterLink,],
   standalone: true,
   templateUrl: './services-detail-component.html',
   styleUrl: './services-detail-component.scss',

@@ -11,7 +11,7 @@
     <!-- Content Overlay -->
     <div class="carousel-content">
       <h1 class="company-name">
-        RSN<span class="ampersand">&</span>Co
+        RSN<span class="ampersand">&nbsp;&&nbsp;</span>Co
       </h1>
 
       <p class="tagline">
@@ -43,15 +43,15 @@
         <div class="col-lg-6 mb-4 mb-lg-0">
           <div class="intro-text">
             <h2 class="mb-4 text-black">About Our Firm</h2>
-            <p class="mb-4">
+            <p class="mb-4 text-justify">
               Our firm was established in the year {{ establishedYear }}, and is engaged in providing professional services in the areas of audit, taxation, and advisory, in accordance with the provisions of the
               Chartered Accountants Act, 1949 and the standards issued by the Institute of Chartered Accountants of India (ICAI).
             </p>
-            <p class="mb-4">
+            <p class="mb-4 text-justify">
               The firm is a partnership firm consisting of three partners, each being members of the Institute of Chartered Accountants of India.
               The partners collectively possess experience in handling statutory audits, tax compliances, and advisory assignments across various sectors.
             </p>
-            <p class="mb-4">
+            <p class="mb-4 text-justify">
               The firm follows established systems and procedures to ensure compliance with applicable laws, professional standards, and ethical requirements.
               Emphasis is placed on due care, objectivity, confidentiality, and timely execution of assignments.
             </p>
@@ -78,11 +78,11 @@
           <div class="mission-card h-100">
 
             <h3 class="mb-3">Our Mission</h3>
-            <p>
+            <p class="text-justify">
               Our mission is to provide comprehensive and high-quality professional services that are carefully aligned with the specific requirements of each client.
               We strive to simplify complex financial, taxation, and compliance processes by making them robust, transparent, and hassle-free.
             </p>
-            <p>
+            <p style="text-align: justify;">
               We are committed to delivering end-to-end support across all stages of our client engagements, ensuring accuracy, timeliness, and reliability in every assignment we undertake.
               Integrity, confidentiality, and ethical conduct form the foundation of our practice, and we continuously work towards building long-term relationships based on trust, professionalism, and consistent value addition.
             </p>
@@ -92,11 +92,11 @@
           <div class="vision-card h-100">
 
             <h3 class="mb-3">Our Vision</h3>
-            <p>
+            <p class="text-justify">
               Our vision is to become a respected and trusted leader in the professional fraternity by setting high standards of excellence, ethics, and client service.
               We aspire to be recognized for our technical expertise, practical approach, and commitment to delivering solutions that support our clients’ growth and compliance objectives.
             </p>
-            <p>
+            <p class="text-justify">
               By fostering continuous learning, embracing evolving regulations, and adopting best professional practices,
               we aim to contribute meaningfully to our clients’ success while upholding the values and responsibilities of the Chartered Accountancy profession.
             </p>
@@ -149,7 +149,7 @@
 
       <!-- WHO WE ARE -->
       <ng-container *ngIf="activeTab === 'leadership'">
-        <p>
+        <p class="text-justify">
           RSN & Co is a firm of Chartered Accountants providing professional
           services in audit, taxation, accounting, and regulatory compliance.
           Our practice is built on strong technical competence, ethical conduct,
@@ -160,13 +160,13 @@
 
       <!-- VALUES -->
       <ng-container *ngIf="activeTab === 'values'">
-        <p>
+        <p class="text-justify">
           The values of RSN & Co guide our professional conduct and define our
           commitment to integrity, objectivity, confidentiality, and ethical
           decision-making.
         </p>
 
-        <p>
+        <p class="text-justify">
           These principles are central to our professional practice and ensure
           compliance with statutory requirements, professional standards, and
           the ethical framework prescribed by ICAI.
@@ -175,13 +175,13 @@
 
       <!-- PRACTICE AREAS -->
       <ng-container *ngIf="activeTab === 'services'">
-        <p>
+        <p class="text-justify">
           Our practice areas include audit and assurance, direct and indirect
           taxation, accounting and bookkeeping services, corporate law and
           regulatory compliances, and advisory services.
         </p>
 
-        <p>
+        <p class="text-justify">
           We deliver these services with a focus on accuracy, timeliness,
           compliance, and professional responsibility.
         </p>
@@ -226,11 +226,11 @@
 </section>
 
 <!-- Services -->
-<section class="services-section py-5 bg-light" >
+<section class="services-section py-5 bg-light-subtle" >
   <div class="text-center mb-5">
     <h2 class="mb-3">Areas of Practice</h2>
   </div>
-  <div class="row">
+  <div class="row m-2">
     <div *ngFor="let service of services" class="col-lg-4 col-md-6 mb-4">
       <div class="service-card text-center"
            [routerLink]="['/services', service.slug]">
@@ -238,7 +238,7 @@
           <i [class]="'fa ' + service.icon"></i>
         </div>
         <h5 class="mt-3 mb-2">{{service.title}}</h5>
-        <p class="text-muted">{{service.shortDescription }}</p>
+        <p>{{service.shortDescription }}</p>
       </div>
     </div>
   </div>

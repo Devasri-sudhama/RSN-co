@@ -1,0 +1,58 @@
+<app-header></app-header>
+
+<section class="newsroom-section mt-5">
+  <div class="container py-5">
+
+    <!-- PAGE HEADING -->
+    <div class="row mb-5 text-center">
+      <div class="col-12">
+        <h1 class="page-title">Newsroom</h1>
+        <p class="page-subtitle">
+          Industry Insights, updates and notifications
+        </p>
+      </div>
+    </div>
+    <div class="news-grid">
+
+      <div class="news-card" *ngFor="let news of newsList">
+
+        <span class="news-date">{{ news.date }}</span>
+
+        <h5 class="news-title">
+          {{ news.title }}
+        </h5>
+
+        <p class="news-description">
+          {{ news.summary }}
+        </p>
+
+        <div class="news-actions">
+          <a
+            *ngIf="news.readMoreUrl"
+            class="read-more"
+            [href]="news.readMoreUrl"
+            target="_blank"
+          >
+            Read More →
+          </a>
+
+          <a
+            *ngIf="news.pdfUrl"
+            class="download-pdf"
+            [href]="news.pdfUrl"
+            download
+          >
+            Download PDF
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+  </div>
+</section>
+
+<app-footer></app-footer>

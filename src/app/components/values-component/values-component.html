@@ -14,23 +14,22 @@
     <!-- MAIN ROW -->
     <div class="row justify-content-center">
 
-      <!-- LEFT: VALUES LIST -->
-      <div class="col-lg-3 col-md-4 mb-4">
+      <!-- LEFT (EMPTY FOR ALIGNMENT / FUTURE USE) -->
+      <div class="col-lg-3 col-md-4 mb-4"></div>
 
-      </div>
-
-      <!-- MIDDLE: VALUE DETAILS -->
+      <!-- MIDDLE: VALUE BOXES -->
       <div class="col-lg-6 col-md-8">
         <div class="area-detail">
 
           <div
+            class="value-box"
             *ngFor="let value of values"
           >
-            <h5>
+            <h5 class="value-title">
               {{ value.title }}
             </h5>
 
-            <p class="page-subtitle">
+            <p class="value-description">
               {{ value.description }}
             </p>
           </div>

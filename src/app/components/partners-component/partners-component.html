@@ -8,53 +8,21 @@
       </p>
     </div>
 
-    <div
-      id="partnersCarousel"
-      class="carousel slide"
-      data-bs-ride="carousel"
-      data-bs-interval="8000"
-    >
+    <div class="partners-list">
+      <div
+        class="partner-card mt-2"
+        *ngFor="let partner of partners"
+      >
 
-      <div class="carousel-inner">
+        <h4 class="partner-name">{{ partner.name }}</h4>
+        <span class="partner-role">{{ partner.designation }}</span>
 
-        <div
-          class="carousel-item"
-          *ngFor="let partner of partners; let i = index"
-          [class.active]="i === 0"
-        >
-          <div class="partner-card">
-
-            <h4 class="partner-name">{{ partner.name }}</h4>
-            <span class="partner-role">{{ partner.designation }}</span>
-
-            <p class="partner-description">
-              {{ partner.description }}
-            </p>
-
-          </div>
-        </div>
+        <p class="partner-description text-justify">
+          {{ partner.description }}
+        </p>
 
       </div>
-
-      <!-- CONTROLS -->
-      <button
-        class="carousel-control-prev"
-        type="button"
-        data-bs-target="#partnersCarousel"
-        data-bs-slide="prev"
-      >
-        ‹
-      </button>
-
-      <button
-        class="carousel-control-next"
-        type="button"
-        data-bs-target="#partnersCarousel"
-        data-bs-slide="next"
-      >
-        ›
-      </button>
-
     </div>
+
   </div>
 </section>

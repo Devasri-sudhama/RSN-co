@@ -7,6 +7,7 @@ import {FooterComponent} from './components/footer-component/footer-component';
 import {RouterOutlet} from '@angular/router';
 import {PartnersComponent} from './components/partners-component/partners-component';
 import {CareersComponent} from './components/careers-component/careers-component';
+import { environment } from '../environments/environments';
 
 
 @Component({
@@ -27,4 +28,10 @@ import {CareersComponent} from './components/careers-component/careers-component
 })
 export class App {
   title = 'RSN & Company';
+  environment = environment;
+  ngOnInit() {
+    console.log('Environment:', environment);
+    console.log('API URL:', environment.apiUrl);
+    console.log('Production:', environment.production);
+  }
 }

@@ -30,10 +30,10 @@ export class ContactComponent implements OnInit {
     {
       city: 'Hyderabad',
       address: 'Plot No. 45, Hitech City, Hyderabad, Telangana 500081',
-      phone: '+91 9876543210',
-      email: 'hyderabad@rsnandco.com',
+      phone: '+91 8686031393',
+      email: 'ca.nikhilvaraganti@gmail.com',
       hours: 'Mon-Sat: 9:00 AM - 6:00 PM',
-      mapLink: 'https://maps.google.com/?q=Hyderabad+Office'
+      mapLink: 'https://www.google.com/maps?q=17.401851654052734,78.4825210571289&z=17&hl=en'
     }
   ];
 
